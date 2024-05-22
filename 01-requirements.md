@@ -1,4 +1,4 @@
-## Requirements and Domain Modelling
+## Requirements
 
 To decide what features the software needs, we must gather requirements in collaboration with clients, stakeholders, and other beneficiaries. Requireme/nts describe various aspects of the system, including its behavior, constraints, and other properties.
 

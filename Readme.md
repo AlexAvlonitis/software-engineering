@@ -8,6 +8,8 @@ A summary on how to approach the creation of a software project "by the book", f
     - [Non-Functional requirements](./01-requirements.md#non-functional-requirements)
     - [Representing requirements](./01-requirements.md#representing-the-requirements)
 2. [Domain modelling](./02-domain-modelling.md)
+    - [Activity diagrams](./02-domain-modelling.md#activity-diagrams)
+    - [Use case models](./02-domain-modelling.md#use-case-models)
 3. [Analysis](#analysis)
 4. [Design](#design)
 5. [Implementation](#implementation)
