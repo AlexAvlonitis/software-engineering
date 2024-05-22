@@ -46,3 +46,27 @@ A list of non-functional requirements exists to help with choosing what needs to
   * *Audit*: Any chosen action can be traced back for analysis.
 
   * *Immunity*: The product is protected against hacking attacks.
+
+
+### Representing the requirements
+
+Requirements can be formally represented in numerous ways, we will explore the [Volere template](https://www.cs.uic.edu/~i440/VolereMaterials/templateArchive16/c%20Volere%20template16.pdf) and the agile representation.
+
+Firstly we need a small introduction to fit criteria. A software product needs to conform to its requirements, in other words, to be tested against its requirements - conformance testing.
+A fit criterion is a precise testable statement of a requirement.
+
+A fit criterion for a functional requirement needs to be written in such a way you can tell whether or not the product satisfies the requirement. For example, the system shall accept a credit card number for a client.
+
+A fit criterion for a non-functional requirement needs to be expressed in terms of some measurable quantity. For example, the credit card number should be accepted securely.
+
+**Volere template**
+
+The Volere template has 5 main sections, *Project drivers*, which are the main reasons and motivations of the project. *Project constraints*, are the restrictions and limitation we want to impose to the product. *Function requirements*, *Non-functional requirements*, *Project Issues* are concerns brought to light during requirement gathering. They help clarify requirements further.
+
+![Volere template](./images/volere.png)
+
+**Agile representation**
+
+Requirements in an Agile way are usually represented with user stories. User stories typically written in cards do not capture the entire requirement the same way the volere template does. Any constraints or notes can be written at the back of the card, and acceptance criteria will determine what is needed to implemented to satisfy the user story.
+
+![User stories card](./images/user-stories.jpg)
