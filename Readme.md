@@ -13,7 +13,7 @@ A summary on how to approach the creation of a software project "by the book", f
     - [Activity diagrams](./02-domain-modelling.md#activity-diagrams)
     - [Use case models](./02-domain-modelling.md#use-case-models)
 3. [Analysis](#analysis)
-    - [Structural models]
+    - [Domain Structural models](./03-analysis.md#domain-structural-models)
 4. [Design](#design)
 5. [Implementation](#implementation)
 6. [Testing](#testing)
