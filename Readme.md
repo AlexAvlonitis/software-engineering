@@ -17,6 +17,7 @@ A summary on how to approach the creation of a software project "by the book", f
 4. [Design](./04-design.md)
     - [Design by contract](./04-design.md#design-by-contract)
     - [Dynamic modelling](./04-design.md#dynamic-modelling)
+    - [More on design decisions](./04-design.md#more-on-design-decisions)
 5. [Implementation](#implementation)
 6. [Testing](#testing)
 7. [Deployment](#deployment)
