@@ -109,3 +109,72 @@ Avoid Chain Calls: An object should avoid calling methods on objects returned by
 Reduced Coupling: By limiting the interactions between objects, the system becomes less interdependent, making it easier to change one part of the system without affecting others.
 Increased Encapsulation: Objects hide their internal structure and only expose necessary functionality, leading to better encapsulation.
 Improved Maintainability: With reduced dependencies and better encapsulation, the codebase becomes easier to understand, modify, and maintain.
+
+**Checking preconditions**
+
+*Design by Contract* (DbC) defines precise agreements (contracts) for software components, including preconditions that must be true before a method executes. DbC relies on the caller to ensure preconditions are met, fostering clearer code and a well-defined contract between caller and method.
+
+*Defensive Programming* proactively handles potential errors within methods, checking preconditions at runtime and responding appropriately to unexpected inputs. This approach aims to create robust software by actively defending against invalid inputs and unexpected states. While DbC places responsibility on the caller to meet preconditions, defensive programming checks conditions internally, making methods more fault-tolerant.
+
+**Strategies for implementing use cases**
+
+**Central class**
+
+One strategy for implementing use cases is with a central class, it involves directing the initial message to a central controller class, such as a Hotel class. This central class serves as a coordinator, responsible for receiving incoming messages and delegating tasks to appropriate classes within the system.
+
+Pros:
+
+* Centralized Control: Having a central class to coordinate interactions simplifies the management of the system, as all messages are routed through a single point of control.
+
+* Modularity: By delegating tasks to appropriate classes, the system can maintain a modular design, where each class focuses on specific responsibilities, leading to better organization and easier maintenance.
+
+* Flexibility: The central class can dynamically adapt to changes in the system by adjusting the routing of messages to different classes, allowing for easy modification and extension of functionality.
+
+Cons:
+
+* Coupling: The central class may become tightly coupled with other classes if it needs to have knowledge of their internal implementations, potentially leading to dependencies and reduced flexibility.
+
+* Single Point of Failure: Since the central class is responsible for coordinating all interactions, any issues or bottlenecks in this class can impact the entire system's performance and reliability.
+
+* Complexity: As the system grows and evolves, the central class may become more complex as it needs to handle an increasing number of messages and interactions, potentially leading to maintenance challenges and decreased readability.
+
+
+**Actor classes**
+
+Actor classes represent external entities, such as hotel staff like receptionists or guests, that interact with a software system, such as a hotel management system, to perform specific actions or achieve particular goals. These classes encapsulate the behaviors and characteristics of the external entities they represent, acting as the entry points for interactions with the system.
+
+Pros:
+
+* Clear Role Definition: Actor classes help to clearly define the roles and responsibilities of external entities within the system, promoting a clear separation of concerns and enhancing the system's modularity.
+
+* Enhanced Understanding: By explicitly defining actor classes such as "Receptionist" or "Guest," developers and stakeholders gain a better understanding of the different entities involved in hotel operations and their respective interactions with the system.
+
+* Improved Communication: Actor classes serve as a common language for communication between stakeholders, helping to clarify requirements and expectations for hotel system behavior and functionality.
+
+Cons:
+
+* Potential Complexity: Introducing actor classes may add complexity to the system's design and implementation, particularly if there are numerous external entities with intricate interactions, such as different roles within a hotel staff.
+
+* Increased Coupling: Depending on how actor classes are implemented, there may be a risk of increased coupling between the actor classes and other components of the hotel management system, potentially reducing flexibility and maintainability.
+
+* Overhead: Maintaining actor classes requires additional effort, including defining their behaviors, interactions, and relationships with other components, which can introduce overhead in system development and maintenance.
+
+**Use cases as classes**
+
+Use case classes, also known as use case objects, represent specific functionalities or actions that a hotel management system needs to perform to satisfy the requirements of its users or stakeholders. These classes encapsulate the behavior and logic associated with particular hotel operations, such as "CheckerIn" for the guest checkin use case or "RoomBooker," serving as the implementation of these use cases within the system.
+
+Pros:
+
+* Clear Representation: Use case classes provide a clear and tangible representation of the hotel system's functionalities, making it easier for developers and stakeholders to understand and manage the system's behavior.
+
+* Modularity: By encapsulating the behavior of individual hotel operations within dedicated classes, the system's design becomes more modular, allowing for easier maintenance, reuse, and extension of functionalities.
+
+* Separation of Concerns: Use case classes promote a clear separation of concerns by encapsulating the behavior and logic associated with specific hotel operations, helping to maintain the system's overall coherence and simplicity.
+
+Cons:
+
+* Increased Complexity: Introducing use case classes may add complexity to the hotel management system's design and implementation, particularly if there are numerous and intricate operations that need to be modeled and implemented.
+
+* Potential Overhead: Maintaining use case classes requires additional effort, including defining their behaviors, interactions, and relationships with other components, which can introduce overhead in system development and maintenance.
+
+* Coupling: Depending on how use case classes are implemented, there may be a risk of increased coupling between the use case classes and other components of the hotel management system, potentially reducing flexibility and maintainability.
