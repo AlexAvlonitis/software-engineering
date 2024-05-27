@@ -178,3 +178,40 @@ Cons:
 * Potential Overhead: Maintaining use case classes requires additional effort, including defining their behaviors, interactions, and relationships with other components, which can introduce overhead in system development and maintenance.
 
 * Coupling: Depending on how use case classes are implemented, there may be a risk of increased coupling between the use case classes and other components of the hotel management system, potentially reducing flexibility and maintainability.
+
+
+### State Machines
+
+A [state machine](https://www.itemis.com/en/products/itemis-create/documentation/user-guide/overview_what_are_state_machines) is a computational model used to represent the behavior of a system that can exist in different states and transition between these states in response to events. In object-oriented programming (OOP), state machines are often used to model the behavior of objects that exhibit complex, state-dependent behaviors.
+
+State machines are useful in OOP when objects need to respond differently to events based on their current state. They help in organizing and managing the behavior of objects by defining a finite set of states and specifying the transitions between these states in response to events. This makes the behavior of objects more explicit and easier to understand, especially in systems with complex and dynamic behaviors.
+
+Notable State Diagram Notations:
+
+* **States**: Represent the different conditions or modes that an object can be in.
+
+* **Events**: Represent occurrences or stimuli that trigger transitions between states.
+
+* **Transitions**: Define the movement from one state to another in response to events.
+
+* **Actions**: Specify the activities or behaviors performed when transitioning between states.
+
+* **Guards**: Conditional expressions that determine whether a transition can occur based on the current state or other conditions.
+
+* **Initial State**: Indicates the initial state of the state machine when it starts executing.
+
+* **Final State**: Represents the end of the state machine's execution.
+
+State diagrams visually represent state machines, with states represented as nodes and transitions represented as arrows between states. Each transition is labeled with the triggering event and, optionally, any guards or actions associated with the transition.
+
+![state diagram](./images/state-diagram.webp)
+
+For example, in a traffic light system:
+
+* States: Red, Yellow, Green
+* Events: TimerExpired, PedestrianRequest
+* Transitions: TimerExpired triggers transition from Red to Green, PedestrianRequest triggers transition from Green to Yellow, etc.
+* Actions: ChangeLightColor, ActivatePedestrianSignal
+
+By using state diagrams and state machines, OOP developers can effectively model and manage the dynamic behavior of objects, making systems easier to understand, maintain, and evolve.
+
