@@ -37,3 +37,14 @@ In technical terms, object models show the instances of the classes (objects) at
 A class model can be represented with UML [class diagrams](https://en.wikipedia.org/wiki/Class_diagram). Class diagrams represent what all possible instances of the class have in common, rather than the particular values of any given instance—unlike object models. The main purpose of class diagrams is to represent the information that exists in the problem domain. They show key concepts as classes, their properties as attributes of those classes, and their relationships as associations.
 
 ![Ckass diagram example](./images/class-diagram.png)
+
+
+**Constraining models**
+
+In a domain, there can be additional information such as [constraints](https://www.uml-diagrams.org/constraint.html) that we need to capture. *Constraints* can be expressed in natural language or using special UML notation. *Invariants* are specified rules that must always be true in a system, and constraints ensure that the invariants are not violated.
+
+Constraints can be applied to the value of attributes, to associations, and as uniqueness constraints.
+
+Constraints can also be expressed formally in an [Object Constraint Language (OCL)](https://en.wikipedia.org/wiki/Object_Constraint_Language).
+
+![UML constraint](./images/uml-constraint.png)
